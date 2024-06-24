@@ -6,7 +6,7 @@
     <title>Salesforce Embedded Service Deployment Test</title>
 </head>
 <body>
-    <h1>Chatbot</h1>
+    <h1>Salesforce Chatbot</h1>
 
     <!-- Salesforce Embedded Service Deployment script -->
     <script type='text/javascript'>
@@ -15,11 +15,11 @@
                 embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
 
                 embeddedservice_bootstrap.init(
-                    '00D3h0000066WtN',
-                    'Fan_Bot',
-                    'https://hometownticketing1.my.site.com/ESWFanBot1718379706705',
+                    '00D3h0000066WtN', // Replace with your Salesforce organization ID
+                    'Customer_Bot', // Replace with your Deployment ID
+                    'https://hometownticketing1.my.site.com/ESWCustomerBot1718315111665', // Replace with your Embedded Service deployment URL
                     {
-                        scrt2URL: 'https://hometownticketing1.my.salesforce-scrt.com'
+                        scrt2URL: 'https://hometownticketing1.my.salesforce-scrt.com' // Replace with your Salesforce SCRT URL
                     }
                 );
             } catch (err) {
@@ -27,7 +27,7 @@
             }
         };
     </script>
-    <script type='text/javascript' src='https://hometownticketing1.my.site.com/ESWFanBot1718379706705/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+    <script type='text/javascript' src='https://hometownticketing1.my.site.com/ESWCustomerBot1718315111665/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 
     <!-- Chatbot container -->
     <div id="embeddedMessaging" style="height: 600px; width: 400px; border: 1px solid #ccc; margin-top: 20px;"></div>
